@@ -1,28 +1,28 @@
-import * as API from './api';
+import fetchGreetings from './api';
 
-const GET_GREETING = 'greetings/random';
+const GET_RANDOM_GREETING = 'greetings/random';
 
 export const getRandomGreeting = (payload) => ({
-    type: GET_GREETING,
-    payload,
+  type: GET_RANDOM_GREETING,
+  payload,
 });
 
 export const fetchRandomGreeting = () => async (dispatch) => {
-    const response = await API.fetchGreetings();
-    dispatch(getRandomGreeting(response));
-}
+  const response = await fetchGreetings();
+  dispatch(getRandomGreeting(response));
+};
 
 const initialState = {
-    greeting: null,
+  greeting: null,
 };
 
 const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case GET_GREETING:
-            return action.payload;
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case GET_RANDOM_GREETING:
+      return action.payload;
+    default:
+      return state;
+  }
 };
 
 export default reducer;
