@@ -47,7 +47,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Donard97/hello-rails-react/issues).
+Feel free to check the [issues page](https://github.com/Donard97/hello-react-front-end/issues).
 
 ## Show your support
 
